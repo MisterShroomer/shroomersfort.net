@@ -1,0 +1,274 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background-image: linear-gradient(#1E90FF, #4B0082);
+  color: black;
+  font-family: pFont; 
+}
+
+.bottom { 
+    text-align: center;  
+    background-color: #696969;
+    display: block;
+    color: #E6E6FA;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px; 
+    padding: 15px;  
+    width: 75%;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.top { 
+    text-align: center;  
+    background-color: #090A9C;
+    display: block;
+    color: gold;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px; 
+    padding: 15px;  
+    width: 75%;
+}
+
+.wrapper {
+	display: grid;
+	gap: 5px;
+	grid-template-areas:
+    "header quote";
+	grid-template-columns: 2fr 2fr;
+}
+
+iframe {
+	width: 100%;
+	max-width: 600px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  background-color: #013a94;
+  color: gold;
+}
+
+table {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+span>a {
+	display: block;
+	text-align: center;
+}
+
+td>h3 {
+	font-weight: bold;
+	text-align: center; 
+}
+
+@media only screen and (max-width: 800px) {
+	td>img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	tr {
+		display: grid;
+		grid-column: 1fr;
+	}
+}
+
+@font-face {
+  font-family: headerFont;
+  src: url(../fonts/SuperMario256.ttf);
+}
+
+@font-face {
+	font-family: pFont;
+	src: url(../fonts/comic.ttf);
+}
+
+h1 {
+    font-family: headerFont;
+    font-size: 72px;
+    text-align: center;
+    text-transform: uppercase; 
+    text-shadow: 3px 3px 2px #66c2ff, -3px -3px 5px #0066ff; 
+    background: linear-gradient(45deg, 66c2ff, #0066ff); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotate(-1deg);
+    margin: 10px 0;
+}
+
+h2 {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: pFont;
+}
+
+h3 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	font-family: pFont;
+}
+
+p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;  
+}
+
+ul {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+marquee {
+	font-size: 18px;
+    height: 15px;
+	background-color: #B22222;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+	padding: 15px;
+}
+
+.x {
+  background-color: #A9A9A9;
+  padding: 15px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  }
+  
+.topnav {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 15px; 
+  background-image: linear-gradient(#1E90FF, #0000CD);
+}
+
+.topnav a {
+  color: #E6E6FA;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: headerFont;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #dde3ed;
+  color: black;
+  font-style: italic;
+  border-radius: 15px;
+}
+
+.topnav .active{
+  background-color: #E6E6FA;
+  color: #0066ff;
+  border-radius: 15px;
+}
+
+hr {
+  border-top: 1px dashed #000000;
+}
+
+.conheader {
+	display: flex;
+	background-color: #483D8B;
+	color: lightgray;
+	height: 30px;
+	align-items: center;
+	padding: 5px;
+	width: 85%;
+	margin: auto;
+}
+
+.container {
+  background-color: #FFFAF0;
+  border: 1px solid black;
+  padding: 4px;
+  width: 85%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.BB {
+	background-color: #ffff99;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.BB2 {
+	background-color: #ADD8E6;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.BB3 {
+	background-color: #98FB98;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	width: 90%;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.BB4 {
+	background-color: #F8F8FF;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+@media (max-width: 640px){
+  
+  .topnav {
+		height: 90px; 
+		line-height: 35px;
+	}
+}

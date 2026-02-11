@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC27's Hazard Control</title>
+    <link href="../styles/hcstyle.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="../images/HCIcon.ico">
+  </head>
+  <body>
+    <div class="top">    
+    <h1><i>Hazard Control</i></h1>
+    </div>
+    
+
+<div class="topnav">
+	<nav align="center">
+    <a class="navlinks" onclick="openPage(event, 'Home')" href="../navpages/games.html">Return</a> | 
+    <a class="navlinks" onclick="openPage(event, 'About')" id="defaultOpen">About</a> | 
+    <a class="navlinks" onclick="openPage(event, 'Story')">Story</a> | 
+    <a class="navlinks" onclick="openPage(event, 'Videos')">Videos</a>
+	</nav>
+</div>
+
+<div class="x">
+    <div id="About" class="navcontent">
+    <h2>About the Series</h2>
+    <p>Hazard Control is a video game still in development. You can download the game on Gamejolt & IndieDB. Version 0.3 coming out is unknown at the moment.</p>
+    <p><a href="https://gamejolt.com/games/Hazard_Control/386062">Hazard Control on GameJolt</a></p>
+    <p><a href="https://www.indiedb.com/games/hazard-control">Hazard Control on IndieDB</a></p>
+    </div>
+
+    <div id="Story" class="navcontent">
+    
+    </div>
+    
+    <div id="Videos" class="navcontent">
+    <h2>Videos</h2>
+     
+      <div class="container">
+      <div class="main-video">
+        <div class ="video">
+     
+          <iframe width="600" height="320" src="https://www.indiedb.com/media/iframe/2655734" allowfullscreen>Hazard Control v0.2 Developer Gameplay</iframe>
+          <h3 class="title">Hazard Control v0.2 Developer Gameplay</h3>
+          <p class="info"><b>Date Aired:</b> 06/26/2021<br><br><b>Description:</b> A gameplay video showcasing Version 0.2.</p>
+  
+        </div>
+      </div>
+     
+     <div class="video-list">
+      <div class="vid active">
+        <iframe src="https://www.indiedb.com/media/iframe/2655734" allowfullscreen loading="lazy">Hazard Control v0.2 Developer Gameplay</iframe>
+        <h3 class="title">Hazard Control v0.2 Developer Gameplay</h3>
+        <p class="info"><b>Date Aired:</b> 06/26/2021<br><br><b>Description:</b> A gameplay video showcasing Version 0.2.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+</div>
+
+    <div class="bottom">    
+    <p><b>LC27 Productions ©2026 / All Rights Reserved</b></p>
+    </div>
+    
+    <script>
+function openPage(evt, pageName) {
+  // Declare all variables
+  var i, navcontent, navlinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  navcontent = document.getElementsByClassName("navcontent");
+  for (i = 0; i < navcontent.length; i++) {
+    navcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  navlinks = document.getElementsByClassName("navlinks");
+  for (i = 0; i < navlinks.length; i++) {
+    navlinks[i].className = navlinks[i].className.replace("active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(pageName).style.display = "block";
+  evt.currentTarget.className += " active";
+  }
+  
+  document.getElementById("defaultOpen").click();
+  
+  //Video Player
+  let listVideo = document.querySelectorAll('.video-list .vid');
+  let mainVideo = document.querySelector('.main-video iframe');
+  let title = document.querySelector('.main-video .title');
+  let info = document.querySelector('.main-video .info');
+  
+  listVideo.forEach(video =>{
+      video.onclick = () =>{
+          listVideo.forEach(vid => vid.classList.remove('active'));
+          video.classList.add('active');
+          if(video.classList.contains('active')){
+              let src = video.children[0].getAttribute('src');
+              mainVideo.src = src;
+              let text = video.children[1].innerHTML;
+              let text2 = video.children[2].innerHTML;
+              title.innerHTML = text;
+              info.innerHTML = text2;
+              
+          };
+      };
+  });
+
+</script>
+    
+  </body>
+</html>

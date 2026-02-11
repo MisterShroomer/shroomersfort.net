@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC27's Tetris Gameplay Videos</title>
+    <link href="../styles/gpstyle.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="../images/Gameplayicon.ico">
+  </head>
+  <body>
+    <div class="top">    
+    <h1><i>LC27's Tetris Gameplay Videos</i></h1>
+    </div>
+    
+
+<div class="topnav">
+	<nav align="center">
+    <a class="navlinks" onclick="openPage(event, 'Return')" href="../index.html">Return</a> | 
+    <a class="navlinks" onclick="openPage(event, 'Videos')" id="defaultOpen">Videos</a>
+	</nav>
+</div>
+
+<div class="x">
+  
+    <div id="Videos" class="navcontent">
+	<div class="bb">
+		<h2>You can watch my gameplay videos of random games here.</h2>
+    </div> 
+      <div class="container">
+      <div class="main-video">
+        <div class ="video">
+     
+          <iframe width="600" height="320" src="https://odysee.com/%24/embed/%40LC27_Productions%3A5%2Flc27%27s-tetris-gameplay-1-%282018%29%3A3?r=8tQXWJxtbM6ujc9vrBeRD6PQvpL55o2J" allowfullscreen>LC27's Tetris Gameplay 1</iframe>
+          <h3 class="title">LC27's Tetris Gameplay 1</h3>
+          <p class="info"><b>Date Aired:</b> 09/10/2018<br><br><b>Description: </b>Here's a video of me playing Tetris back in 2018. Enjoy!</p>
+  
+        </div>
+      </div>
+     
+     <div class="video-list">
+		<div class="vid active">
+			<iframe src="https://odysee.com/%24/embed/%40LC27_Productions%3A5%2Flc27%27s-tetris-gameplay-1-%282018%29%3A3?r=8tQXWJxtbM6ujc9vrBeRD6PQvpL55o2J" allowfullscreen loading="lazy">LC27's Tetris Gameplay 1</iframe>
+			<h3 class="title">LC27's Tetris Gameplay 1</h3>
+			<p class="info"><b>Date Aired:</b> 09/10/2018<br><br><b>Description: </b>Here's a video of me playing Tetris back in 2018. Enjoy!</p>
+		</div>
+		<div class="vid">
+			<iframe src="https://odysee.com/%24/embed/%40LC27_Productions%3A5%2Flc27%27s-tetris-gameplay-2%3Ae?r=8tQXWJxtbM6ujc9vrBeRD6PQvpL55o2J" allowfullscreen loading="lazy">LC27's Tetris Gameplay 2</iframe>
+			<h3 class="title">LC27's Tetris Gameplay 2</h3>
+			<p class="info"><b>Date Aired:</b> 07/17/2021<br><br><b>Description:</b> Here's the sequel to that Tetris video I did back in 2018. Enjoy!</p>
+		</div>
+		<div class="vid">
+			<iframe src="https://odysee.com/%24/embed/%40LC27_Productions%3A5%2FTetris-Gameplay-3-Full%3A3?r=8tQXWJxtbM6ujc9vrBeRD6PQvpL55o2J" allowfullscreen loading="lazy">LC27's Tetris Gameplay 3</iframe>
+			<h3 class="title">LC27's Tetris Gameplay 3</h3>
+			<p class="info"><b>Date Aired:</b> 01/05/2025<br><br><b>Description:</b> An overdue video that should have been released in 2022 or 2023. Enjoy!</p>
+		</div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+</div>
+
+    <div class="bottom">    
+    <p><b>LC27 Productions ©2026 / All Rights Reserved</b></p>
+    </div>
+    
+    <script>
+function openPage(evt, pageName) {
+  // Declare all variables
+  var i, navcontent, navlinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  navcontent = document.getElementsByClassName("navcontent");
+  for (i = 0; i < navcontent.length; i++) {
+    navcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  navlinks = document.getElementsByClassName("navlinks");
+  for (i = 0; i < navlinks.length; i++) {
+    navlinks[i].className = navlinks[i].className.replace("active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(pageName).style.display = "block";
+  evt.currentTarget.className += " active";
+  }
+  
+  document.getElementById("defaultOpen").click();
+  
+  //Video Player
+  let listVideo = document.querySelectorAll('.video-list .vid');
+  let mainVideo = document.querySelector('.main-video iframe');
+  let title = document.querySelector('.main-video .title');
+  let info = document.querySelector('.main-video .info');
+  
+  listVideo.forEach(video =>{
+      video.onclick = () =>{
+          listVideo.forEach(vid => vid.classList.remove('active'));
+          video.classList.add('active');
+          if(video.classList.contains('active')){
+              let src = video.children[0].getAttribute('src');
+              mainVideo.src = src;
+              let text = video.children[1].innerHTML;
+              let text2 = video.children[2].innerHTML;
+              title.innerHTML = text;
+              info.innerHTML = text2;
+              
+          };
+      };
+  });
+
+</script>
+    
+  </body>
+</html>
