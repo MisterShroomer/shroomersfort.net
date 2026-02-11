@@ -1,0 +1,21 @@
+body {
+  background-color: #ad0a0a;
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman";
+}
+
+a {
+  color: white;
+}
+
+h1 {
+  font-style: italic;
+}
+
+img {
+	height: auto; 
+    width: auto; 
+    max-width: 566px; 
+    max-height: 386px;
+}
