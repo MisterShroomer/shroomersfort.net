@@ -14,7 +14,7 @@ const quotes = [
 	"Totally not funded by the Happy Kecleon Merchants.",
 	"Half Life 3 will come out on... fuck idk",
 	"Read this quote for FREE VIP!",
-	"POKEMON! Turning kids into furries since 1998.",
+	"POKEMON! Corrupting the youth since 1998.",
 	"Warning! Content may not provide comfort.",
 	"You will browse my site, and you will be happy!",
 	"Don't look behind you.",
