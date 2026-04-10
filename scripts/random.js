@@ -31,7 +31,13 @@ const quotes = [
 	"Who's laughing now!",
 	"I got a bad feeling about this.",
 	"They glow in the dark.",
-	"Blockland! The building game that's in a 'Badspot'?"
+	"Blockland! The building game that's in a 'Badspot'?",
+	"The fastest computer in the world is the most expensive.",
+	"All your bases are belong to us!",
+	"Somebody set us up the, the Bobomb!",
+	"Plastic Men and Iron Blades.",
+	"I R TEH PWNZ0R!",
+	"Powered by Shrooms!"
 ];
 
 document.getElementById('randomQuote').textContent = quotes[Math.floor(Math.random() * quotes.length)];

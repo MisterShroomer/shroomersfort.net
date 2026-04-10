@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LC27's Tetris Gameplay Videos</title>
-    <link href="../styles/gpstyle.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../styles/style.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" type="image/x-icon" href="../images/Gameplayicon.ico">
   </head>
   <body>
     <div class="top">    
-    <h1><i>LC27's Tetris Gameplay Videos</i></h1>
     </div>
     
 
 <div class="topnav">
 	<nav align="center">
-    <a class="navlinks" onclick="openPage(event, 'Return')" href="../index.html">Return</a> | 
-    <a class="navlinks" onclick="openPage(event, 'Videos')" id="defaultOpen">Videos</a>
+		  <a href="../index.html">Home</a> | 
+		  <a href="../navpages/videos.html">Videos</a> | 
+		  <a href="../navpages/games.html">Games</a> | 
+		  <a class="../navpages/active">Gallery</a> | 
+		  <a href="../navpages/audio.html">Audio</a> | 
+		  <a href="../navpages/stories.html">Stories</a> | 
+		  <a href="../navpages/blog.html">Blog</a> | 
+		  <a href="../navpages/about.html">About</a>
 	</nav>
 </div>
 
 <div class="x">
-  
-    <div id="Videos" class="navcontent">
+		<h2><i>LC27's Tetris Gameplay Videos</i></h2>
+		    
       <div class="container">
       <div class="main-video">
         <div class ="video">
@@ -52,7 +57,6 @@
 		</div>
     </div>
     </div>
-    </div>
     
     
     
@@ -62,53 +66,7 @@
     <p><b>LC27 Productions ©2026 / All Rights Reserved</b></p>
     </div>
     
-    <script>
-function openPage(evt, pageName) {
-  // Declare all variables
-  var i, navcontent, navlinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  navcontent = document.getElementsByClassName("navcontent");
-  for (i = 0; i < navcontent.length; i++) {
-    navcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  navlinks = document.getElementsByClassName("navlinks");
-  for (i = 0; i < navlinks.length; i++) {
-    navlinks[i].className = navlinks[i].className.replace("active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(pageName).style.display = "block";
-  evt.currentTarget.className += " active";
-  }
-  
-  document.getElementById("defaultOpen").click();
-  
-  //Video Player
-  let listVideo = document.querySelectorAll('.video-list .vid');
-  let mainVideo = document.querySelector('.main-video iframe');
-  let title = document.querySelector('.main-video .title');
-  let info = document.querySelector('.main-video .info');
-  
-  listVideo.forEach(video =>{
-      video.onclick = () =>{
-          listVideo.forEach(vid => vid.classList.remove('active'));
-          video.classList.add('active');
-          if(video.classList.contains('active')){
-              let src = video.children[0].getAttribute('src');
-              mainVideo.src = src;
-              let text = video.children[1].innerHTML;
-              let text2 = video.children[2].innerHTML;
-              title.innerHTML = text;
-              info.innerHTML = text2;
-              
-          };
-      };
-  });
-
-</script>
+<script src="../scripts/videoplayer.js"></script>
     
   </body>
 </html>
